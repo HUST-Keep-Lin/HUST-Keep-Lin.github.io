@@ -8,8 +8,14 @@
       <link href="/2023/09/15/My-New-Post/"/>
       <url>/2023/09/15/My-New-Post/</url>
       
-        <content type="html"><![CDATA[<p>摘要</p><span id="more"></span><p>正文</p>]]></content>
+        <content type="html"><![CDATA[<p>摘要</p><h2 id="2023-9-15"><a href="#2023-9-15" class="headerlink" title="2023&#x2F;9&#x2F;15"></a>2023&#x2F;9&#x2F;15</h2><span id="more"></span><p>正文</p>]]></content>
       
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
       
       
     </entry>
