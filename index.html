@@ -1215,114 +1215,13 @@
       <h3 class="motto-title">座右铭</h3>
       <div class="motto-content">
         <p>
-          沉淀后我愿意做个温暖的人，有自己的喜好，有自己的原则，有自己的信仰，不急功近利，不浮夸轻薄。宠辱不惊，淡定安逸，心静如水，不忘初心，方得始终。——凌茜  
+          贪财有道 好色有品 博学有识 读书有瘾 喝酒有量 玩笑有度  
         </p> 
       </div>
   </div>
 
     <!-- 首页公告 -->
     
-<style>
-  .index-notice-content {
-    margin-top: 10px;
-  }
-  .warp {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .index-notice-content__ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-  }
-  .index-notice-content__ul li,
-  .index-notice-content__ul a {
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-  }
-  .index-notice-content__title {
-    flex: 1;
-    overflow: hidden;
-  }
-  .index-notice-content__title a,
-  .index-notice-content__title span {
-    overflow: hidden;
-    display: block;
-    text-overflow:ellipsis; 
-    white-space: nowrap;
-    height: 100%;
-    width: 100%;
-    color: #000;
-  }
-  .index-notice-content__title a:hover,
-  .index-notice-content__title span:hover {
-    text-decoration: underline;
-  }
-  .index-notice-content__date {
-    min-width: 80px;
-    margin-left: 5px;
-    color: #000;
-  }
-</style>
-<div class="index-notice" id="appIndexNotice">
-    <h3>
-      <i class="fas fa-bullhorn index-notice-icon"></i>公告
-    </h3>
-    <div class="index-notice-content">
-      
-      <vue-seamless-scroll
-        :data="listData"
-        :class-option="classOption"
-        class="warp"
-        style="height: 0px"
-      >
-        <ul class="index-notice-content__ul">
-          
-           
-        </ul>
-      </vue-seamless-scroll>
-    </div>
-</div>
-<script src="/js/vue-seamless-scroll/index.js"></script>
-
-<!-- 滚动插件采用 vue-seamless-scroll
-  https://chenxuan0000.github.io/vue-seamless-scroll/zh/guide/06-singleStop.html 
--->
-
-<script>
-  var seamless = JSON.parse('false');
-  seamless = seamless ? 0 : 30;
-  var listData = '' || '';
-  listData = listData.split(',');
-  var vm = new Vue({
-    el: '#appIndexNotice',
-    data: {
-      listData: listData,
-      moveNum: 2,
-      classOption: {
-        singleHeight: seamless,
-        limitMoveNum: listData.length
-      },
-    },
-    computed: {
-    },
-    mounted() {
-    },
-    methods: {
-    },
-    created() {
-      this.moveNum = parseInt(this.listData.length);
-    }
-  })
-</script>
-
-
-
     <!-- 首页文章置顶 -->
     
 
@@ -1366,7 +1265,7 @@
 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+  <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
 </div>
 
 
@@ -1543,9 +1442,9 @@
         <ul class="entry navigation">
           
             <li><a class="flat-box"
-              title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-              id="categoriesE5898DE7ABAF"
-              ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
+              title="/categories/%E5%85%B6%E4%BB%96/" href="/categories/%E5%85%B6%E4%BB%96/"
+              id="categoriesE585B6E4BB96"
+              ><div class='name'>其他</div><div class='badge'>(1)</div></a></li>
           
         </ul>
       </div>
@@ -1656,7 +1555,7 @@
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>84 字</div>
+          <div>88 字</div>
         </div>
       
 
@@ -1668,8 +1567,8 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Fri Sep 15 2023 23:03:18 GMT+0800 (台北标准时间)</div>
-            <div id="last-update-show">2023-09-15 日</div>
+            <div id="last-update" style="display: none;">Sun Sep 17 2023 16:54:57 GMT+0800 (台北标准时间)</div>
+            <div id="last-update-show">2023-09-17 日</div>
           
         </div>
         
@@ -1719,7 +1618,7 @@
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2023-09-15 日';
+            document.getElementById('last-update-show').innerHTML = '2023-09-17 日';
           }
         </script>
         
@@ -1942,6 +1841,13 @@
     <div class="footer-main">
       
         
+          
+            <div><p>有疑问欢迎联系我</p>
+</div>
+          
+        
+      
+        
           <div class="link">
             
               
@@ -1959,27 +1865,6 @@
                   
                 </a>
               
-            
-          </div>
-        
-      
-        
-          
-            <!-- 不蒜子统计 -->
-            <!-- 不蒜子统计 -->
-<span id="busuanzi_container_site_pv">
-      <i class="fas fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
-</span>
-<span class="post-meta-divider">|</span>
-<span id="busuanzi_container_site_uv" style='display:none'>
-      <i class="fas fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
-</span>
-
-          
-        
-      
-        
-          <div class="footer-custom">
             
           </div>
         
@@ -2521,7 +2406,7 @@
       utterances.async = true;
       utterances.setAttribute('issue-term', 'pathname')
       utterances.setAttribute('theme', utteranceCommon.Theme)
-      utterances.setAttribute('repo', '')
+      utterances.setAttribute('repo', 'hust-keep-lin/hust-keep-lin.github.io')
       utterances.crossorigin = 'anonymous';
       utterances.src = 'https://utteranc.es/client.js';
       // content 是要插入评论的地方
