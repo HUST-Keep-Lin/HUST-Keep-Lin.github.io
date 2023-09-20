@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>My New Post | KeepLin&#39;s blog</title>
+  <title>CSR &amp; SSR | KeepLin&#39;s blog</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -540,21 +540,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp')">
+  background-position: center center;position: relative;background-image:url('https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        My New Post
+        CSR &amp; SSR
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2023-09-15 |
+          <i class="fas fa-calendar"></i> 发表于：2023-09-19 |
         </span>
       
 
@@ -562,8 +562,8 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> 分类：
           
-            <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-detail-header_category">
-              其他
+            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-detail-header_category">
+              前端
             </a>
           
         </span>
@@ -572,7 +572,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 13 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 290 |
           </span>
   
           <span class="min2read">
@@ -603,9 +603,15 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <p>摘要</p>
-<h2 id="2023-9-15"><a href="#2023-9-15" class="headerlink" title="2023&#x2F;9&#x2F;15"></a>2023&#x2F;9&#x2F;15</h2><span id="more"></span>
-<p>第一篇test文章</p>
+        <p>服务端渲染 VS 客户端渲染</p>
+<span id="more"></span>
+
+<h3 id="客户端渲染-CSR"><a href="#客户端渲染-CSR" class="headerlink" title="客户端渲染 CSR"></a>客户端渲染 CSR</h3><p><img src="/image.png" class="lazyload placeholder" data-srcset="/image.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Alt text"><br>从图中可以看出，当用户打开一个链接时，向Web服务器请求对应的资源，请求到之后，解析HTML，下载对应的资源（CSS,JS）,所以，最开始获取的HTML一般而言只有一个根节点的容器，其余内容需要解析运行js脚本才能够渲染出来</p>
+<h3 id="服务端渲染-SSR"><a href="#服务端渲染-SSR" class="headerlink" title="服务端渲染 SSR"></a>服务端渲染 SSR</h3><p><img src="/image-1.png" class="lazyload placeholder" data-srcset="/image-1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Alt text"><br>从浏览器角度而言，获得的HTML是完整的。完整的HTML有利于SEO,当使用搜索引擎去搜索一个问题时，搜索引擎会爬取所有相关的内容，对内容进行排序，而爬虫爬取的正是HTML，并且，SPA应用服务器响应的一般是只有根节点的容器，同时里面的内容在完成数据填充之后才有，爬虫才可以爬到。通过SSR响应的HTML是完整的，有利于爬虫的爬取。</p>
+<h3 id="SSR应用场景"><a href="#SSR应用场景" class="headerlink" title="SSR应用场景"></a>SSR应用场景</h3><ul>
+<li>SEO需求</li>
+<li>需要首屏渲染速度快：因为服务端只需返回渲染好的HTML，这部分代码量很小，用户体验更好</li>
+</ul>
 
       </div>
       <div class="post-tags-categories">
@@ -619,7 +625,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2023/09/15/My-New-Post/" target="_blank" title="My New Post">http://hust-keep-lin.github.io/2023/09/15/My-New-Post/</a>
+    <a href="/2023/09/19/CSR-SSR/" target="_blank" title="CSR &amp; SSR">http://hust-keep-lin.github.io/2023/09/19/CSR-SSR/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -637,41 +643,23 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-    </div>
-    <a href="/2023/09/17/Tp-link%E8%81%94%E6%B4%B2%E6%A0%A1%E6%8B%9B/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">Tp-link联洲校招</div>
-      </div>
-      
-      <!-- <div class="content">
-        Tp-Link联洲24校园招聘
-
-笔试一面
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2023/09/15/hello-world/" class="post-nav-link">
+    <a href="/2023/09/17/Tp-link%E8%81%94%E6%B4%B2%E6%A0%A1%E6%8B%9B/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Hello World</div>
+        <div class="title-text">Tp-link联洲校招</div>
       </div>
       <!-- <div class="content">
-        Welcome to Hexo! This is your very first post. Check documen
+        Tp-Link联洲24校园招聘
+
+笔试一面
       </div> -->
     </a>
   </div>
@@ -894,7 +882,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2023-9-15"><span class="toc-text">2023&#x2F;9&#x2F;15</span></a></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B2%E6%9F%93-CSR"><span class="toc-text">客户端渲染 CSR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93-SSR"><span class="toc-text">服务端渲染 SSR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSR%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">SSR应用场景</span></a></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
