@@ -562,8 +562,8 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> 分类：
           
-            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-detail-header_category">
-              前端
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%85%AB%E8%82%A1/" class="post-detail-header_category">
+              前端八股
             </a>
           
         </span>
@@ -606,8 +606,8 @@
         <p>服务端渲染 VS 客户端渲染</p>
 <span id="more"></span>
 
-<h3 id="客户端渲染-CSR"><a href="#客户端渲染-CSR" class="headerlink" title="客户端渲染 CSR"></a>客户端渲染 CSR</h3><p><img src="/image.png" class="lazyload placeholder" data-srcset="/image.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Alt text"><br>从图中可以看出，当用户打开一个链接时，向Web服务器请求对应的资源，请求到之后，解析HTML，下载对应的资源（CSS,JS）,所以，最开始获取的HTML一般而言只有一个根节点的容器，其余内容需要解析运行js脚本才能够渲染出来</p>
-<h3 id="服务端渲染-SSR"><a href="#服务端渲染-SSR" class="headerlink" title="服务端渲染 SSR"></a>服务端渲染 SSR</h3><p><img src="/image-1.png" class="lazyload placeholder" data-srcset="/image-1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Alt text"><br>从浏览器角度而言，获得的HTML是完整的。完整的HTML有利于SEO,当使用搜索引擎去搜索一个问题时，搜索引擎会爬取所有相关的内容，对内容进行排序，而爬虫爬取的正是HTML，并且，SPA应用服务器响应的一般是只有根节点的容器，同时里面的内容在完成数据填充之后才有，爬虫才可以爬到。通过SSR响应的HTML是完整的，有利于爬虫的爬取。</p>
+<h3 id="客户端渲染-CSR"><a href="#客户端渲染-CSR" class="headerlink" title="客户端渲染 CSR"></a>客户端渲染 CSR</h3><p><img src="/img/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B2%E6%9F%93.png" class="lazyload placeholder" data-srcset="/img/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B2%E6%9F%93.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="客户端渲染图流程图"><br>从图中可以看出，当用户打开一个链接时，向Web服务器请求对应的资源，请求到之后，解析HTML，下载对应的资源（CSS,JS）,所以，最开始获取的HTML一般而言只有一个根节点的容器，其余内容需要解析运行js脚本才能够渲染出来</p>
+<h3 id="服务端渲染-SSR"><a href="#服务端渲染-SSR" class="headerlink" title="服务端渲染 SSR"></a>服务端渲染 SSR</h3><p><img src="/img/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B8%B2%E6%9F%93.png" class="lazyload placeholder" data-srcset="/img/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B8%B2%E6%9F%93.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="服务器渲染流程图"><br>从浏览器角度而言，获得的HTML是完整的。完整的HTML有利于SEO,当使用搜索引擎去搜索一个问题时，搜索引擎会爬取所有相关的内容，对内容进行排序，而爬虫爬取的正是HTML，并且，SPA应用服务器响应的一般是只有根节点的容器，同时里面的内容在完成数据填充之后才有，爬虫才可以爬到。通过SSR响应的HTML是完整的，有利于爬虫的爬取。</p>
 <h3 id="SSR应用场景"><a href="#SSR应用场景" class="headerlink" title="SSR应用场景"></a>SSR应用场景</h3><ul>
 <li>SEO需求</li>
 <li>需要首屏渲染速度快：因为服务端只需返回渲染好的HTML，这部分代码量很小，用户体验更好</li>
