@@ -4,6 +4,38 @@
   
     
     <entry>
+      <title>lit-gpt 配置</title>
+      <link href="/2023/10/25/lit-gpt-%E9%85%8D%E7%BD%AE/"/>
+      <url>/2023/10/25/lit-gpt-%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<p>lit-gpt配置与使用</p><span id="more"></span><h3 id="lit-gpt使用"><a href="#lit-gpt使用" class="headerlink" title="lit-gpt使用"></a>lit-gpt使用</h3><h4 id="github地址"><a href="#github地址" class="headerlink" title="github地址"></a><a href="https://github.com/Lightning-AI/lit-gpt">github地址</a></h4><h4 id="使用模型"><a href="#使用模型" class="headerlink" title="使用模型"></a>使用模型</h4><p><strong>下载对应模型</strong></p><ul><li>命令行下载（存在无法访问的问题  需要翻墙</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python scripts/download.py --repo_id stabilityai/stablelm-base-alpha-3b</span><br></pre></td></tr></table></figure><ul><li>去<a href="https://huggingface.co/stabilityai/stablelm-tuned-alpha-3b">huggingface官网</a>下载,放入对应文件夹——checkpoint</li></ul><p><strong>解析对应格式</strong></p><blockquote><p>会生成对应 <code>lit_model.pth</code> 文件</p></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python scripts/convert_hf_checkpoint.py --checkpoint_dir checkpoints/stabilityai/stablelm-base-alpha-3b</span><br></pre></td></tr></table></figure><h4 id="模型微调"><a href="#模型微调" class="headerlink" title="模型微调"></a>模型微调</h4><p><strong>Prefix Tuning与LLaMA-Adapters</strong></p><ul><li><p>Prefix Tuning</p><ul><li>添加前缀指导模型的生成过程</li><li>前缀引导模型生成特定主题、风格或格式的文本</li></ul></li><li><p>LLaMA-Adapters 语言自适应模块</p><ul><li>在<strong>结构</strong>中添加自适应模块来增强模型的灵活性与可调节性</li><li>自适应模块是一个小型神经网络</li></ul></li></ul><p><strong>下载微调数据集</strong></p><ul><li>checkpoint_dir 指定为哪个模型准备Alpaca数据集<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python scripts/prepare_alpaca.py --checkpoint_dir checkpoints/stabilityai/stablelm-base-alpha-3b</span><br></pre></td></tr></table></figure></li></ul><p><strong>准备自己的数据集</strong> <a href="https://github.com/Lightning-AI/lit-gpt/blob/main/tutorials/finetune_adapter.md">网址</a></p><p><strong>相关参考</strong></p><ul><li><a href="https://lightning.ai/pages/community/article/understanding-llama-adapters/">从前缀微调到适配器 Understanding Parameter-Efficient Finetuning of Large Language Models: From Prefix Tuning to LLaMA-Adapters</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> GPT </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue组件传值</title>
+      <link href="/2023/09/26/Vue%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/"/>
+      <url>/2023/09/26/Vue%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSR &amp; SSR</title>
       <link href="/2023/09/19/CSR-SSR/"/>
       <url>/2023/09/19/CSR-SSR/</url>
