@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Linux服务器使用Clash</title>
+      <link href="/2023/11/21/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8Clash/"/>
+      <url>/2023/11/21/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8Clash/</url>
+      
+        <content type="html"><![CDATA[<p>解决访问被墙问题</p><span id="more"></span><h3 id="linux服务器使用clash"><a href="#linux服务器使用clash" class="headerlink" title="linux服务器使用clash"></a>linux服务器使用clash</h3><h4 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h4><ul><li>访问huggingface等被国内ban了的网址</li><li>后续如果想下载谷歌云盘的数据集时，也能够直接在服务器上操作，而无需借助本地主机做中转</li></ul><h4 id="Clash安装"><a href="#Clash安装" class="headerlink" title="Clash安装"></a>Clash安装</h4><p><strong>下载</strong></p><p>由于Clash仓库已经删库跑路，只能通过一些其他的方法地址进行Wget在线下载（建议新建一个clash文件夹执行此操作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Github下载文件  已经删库</span></span><br><span class="line">wget https://github.com/Dreamacro/clash/releases/download/v1.14.0/clash-linux-amd64-v1.14.0.gz</span><br><span class="line"><span class="comment"># 使用opclash下载</span></span><br><span class="line">wget https://git.opclash.com/kehuduan/clash/clash-linux-amd64-v1.14.0.gz</span><br></pre></td></tr></table></figure><p>在当前目录下出现一个clash-linux-amd64-v1.14.0.gz压缩包</p><p><strong>解压并重命名为clash</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gunzip clash-linux-amd64-v1.14.0.gz</span><br><span class="line"><span class="built_in">mv</span> clash-linux-amd64-v1.14.0 clash</span><br></pre></td></tr></table></figure><h4 id="文件配置"><a href="#文件配置" class="headerlink" title="文件配置"></a>文件配置</h4><p><strong>为clash添加可执行文件</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x clash</span><br></pre></td></tr></table></figure><p><strong>启动clash</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./clash</span><br></pre></td></tr></table></figure><p>Clash 运行时需要 Country.mmdb 文件，当第一次启动 Clash 时（使用 .&#x2F;clash 命令） 会自动下载（会下载至 &#x2F;home&#x2F;XXX&#x2F;.config&#x2F;clash 文件夹下）。自动下载可能会因网络原因较慢，可以访问该<a href="https://github.com/Dreamacro/maxmind-geoip/releases">链接</a>手动下载。此时&#x2F;home&#x2F;XXX&#x2F;.config&#x2F;clash文件夹下会有三个文件：cache.db、config.yaml、Country.mmdb，我们需要使用自己使用的网络服务配置替换掉config.yaml中的内容。</p><h4 id="启动代理服务"><a href="#启动代理服务" class="headerlink" title="启动代理服务"></a>启动代理服务</h4><p><strong>先启动Clash</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./clash</span><br></pre></td></tr></table></figure><p><strong>开启代理</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890</span><br></pre></td></tr></table></figure><p><strong>验证代理是否启动</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://www.google.com</span><br></pre></td></tr></table></figure><p>要验证代理是否有效，则可以选择平常无法访问的网站进行测试（有些网站不响应ping，所以使用curL会好一些） 。如果有字符输出则表示代理有效，能访问谷歌。</p><h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul><li><a href="https://opclash.com/article/302.html">https://opclash.com/article/302.html</a></li><li>[<a href="https://blog.iswiftai.com/posts/clash-linux/#%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86]">https://blog.iswiftai.com/posts/clash-linux/#%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86]</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端八股 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>lit-gpt 配置</title>
       <link href="/2023/10/25/lit-gpt-%E9%85%8D%E7%BD%AE/"/>
       <url>/2023/10/25/lit-gpt-%E9%85%8D%E7%BD%AE/</url>
