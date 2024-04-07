@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>修改模型词嵌入层（wte）</title>
+      <link href="/2024/04/07/%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9E%8B%E8%AF%8D%E5%B5%8C%E5%85%A5%E5%B1%82%EF%BC%88wte%EF%BC%89/"/>
+      <url>/2024/04/07/%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9E%8B%E8%AF%8D%E5%B5%8C%E5%85%A5%E5%B1%82%EF%BC%88wte%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p>修改模型词嵌入的输入，（vocab_size, embedding_size）m使得模型可以解决多个任务，主要是vocab_size这个</p><span id="more"></span><p>报错解决</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RuntimeError: Error(s)<span class="keyword">in</span> loading state dict <span class="keyword">for</span> GPT2LMHeadModel:.</span><br><span class="line">size mismatch <span class="keyword">for</span> wte.weight: copying a param with shape torch,size([58257, 768]) from checkpoint, the shape <span class="keyword">in</span> current model is torch.size([78, 768]).</span><br></pre></td></tr></table></figure><ul><li>原始模型wte层维度为(58257, 768), 而想要其转换为我们所需的(78. 768)</li><li>初始化模型后直接使用  <code>model.resize_token_embeddings(len(tokenizer))</code> 来将wte层的维度设置为tokenizer相同大小</li></ul><p><img src="/img/wte%E6%8A%A5%E9%94%99.png" class="lazyload placeholder" data-srcset="/img/wte%E6%8A%A5%E9%94%99.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="配置代码块"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>cross_entropy的输出及标签</title>
       <link href="/2024/04/07/cross-entropy%E7%9A%84%E8%BE%93%E5%87%BA%E5%8F%8A%E6%A0%87%E7%AD%BE/"/>
       <url>/2024/04/07/cross-entropy%E7%9A%84%E8%BE%93%E5%87%BA%E5%8F%8A%E6%A0%87%E7%AD%BE/</url>
