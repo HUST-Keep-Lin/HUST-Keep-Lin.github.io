@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>llama&amp;Qwen部署</title>
+      <link href="/2024/04/07/llama-Qwen%E9%83%A8%E7%BD%B2/"/>
+      <url>/2024/04/07/llama-Qwen%E9%83%A8%E7%BD%B2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p><img src="https://github.com/LlamaFamily/Llama-Chinese" class="lazyload placeholder" data-srcset="https://github.com/LlamaFamily/Llama-Chinese" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Chinese Llama(使用中文预训练 + 微调的Atom版本)"></p><ul><li>Chinese Llama只是在原始llama上微调，但是原始llama是使用英文数据进行预训练的，所以用中文微调效果肯定一般</li><li>Atom仅仅使用llama的结构，使用中文数据预训练 + 微调</li></ul><p><img src="https://github.com/QwenLM/Qwen" class="lazyload placeholder" data-srcset="https://github.com/QwenLM/Qwen" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Qwen"></p><h2 id="占用显卡资源"><a href="#占用显卡资源" class="headerlink" title="占用显卡资源"></a>占用显卡资源</h2><ul><li>一张3090Ti</li><li>使用int4 int8 fp16量化会占用更少的资源</li></ul><h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><ul><li><code>cuda &gt;= 11.6</code>， <code>flash-atten</code>要求</li><li>QWen实现了 history_chat功能</li><li>Atom需要按照他的prompt实现history_chat功能</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大模型 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>修改模型词嵌入层（wte）</title>
       <link href="/2024/04/07/%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9E%8B%E8%AF%8D%E5%B5%8C%E5%85%A5%E5%B1%82%EF%BC%88wte%EF%BC%89/"/>
       <url>/2024/04/07/%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9E%8B%E8%AF%8D%E5%B5%8C%E5%85%A5%E5%B1%82%EF%BC%88wte%EF%BC%89/</url>
