@@ -522,11 +522,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 499 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 451 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
           </span>
   
           
@@ -556,23 +556,23 @@
 <h3 id="配置系统网络"><a href="#配置系统网络" class="headerlink" title="配置系统网络"></a>配置系统网络</h3><p>编辑虚拟机设置 &gt; 网络适配器 &gt; 自定义 &gt; VMnet8（NAT 模式）<br><img src="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA1.png" class="lazyload placeholder" data-srcset="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="p1"></p>
 <p>编辑&gt;虚拟网络设置</p>
 <ul>
-<li>将VMnet8改为NAT模式，启动DHCP 记住此时的子网ip<br>(&#x2F;img&#x2F;虚拟机2.png)</li>
+<li>将VMnet8改为NAT模式，启动DHCP 记住此时的子网ip<br><img src="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA2.png" class="lazyload placeholder" data-srcset="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="p2"></li>
 </ul>
 <p>设置该网络的NET</p>
 <ul>
-<li>记住网关地址<br>(&#x2F;img&#x2F;虚拟机3.png)</li>
+<li>记住网关地址<br><img src="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA3.png" class="lazyload placeholder" data-srcset="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA3.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="p3"></li>
 </ul>
 <h3 id="设置系统静态IP"><a href="#设置系统静态IP" class="headerlink" title="设置系统静态IP"></a>设置系统静态IP</h3><p>开启虚拟机 进入 &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;，编辑ifcfg-ens33文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line">BOOTPROTO=static			<span class="comment">#改为静态</span></span><br><span class="line"></span><br><span class="line">DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=<span class="built_in">yes</span></span><br><span class="line">IPV6_AUTOCONF=<span class="built_in">yes</span></span><br><span class="line">IPV6_DEFROUTE=<span class="built_in">yes</span></span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">IPV6_ADDR_GEN_MODE=stable-privacy</span><br><span class="line">NAME=ens33</span><br><span class="line">UUID=6eab4686-ca67-4038-95d3-f8994a7e294a</span><br><span class="line">DEVICE=ens33</span><br><span class="line">ONBOOT=<span class="built_in">yes</span>					<span class="comment">#改为yes</span></span><br><span class="line"></span><br><span class="line">IPADDR=192.168.163.100		<span class="comment">#添加静态IP地址，网段需要和步骤一中的子网IP网段一致</span></span><br><span class="line">NETMASK=255.255.255.0		<span class="comment">#添加子网掩码</span></span><br><span class="line">PREFIX=24</span><br><span class="line">GATEWAY=192.168.163.2		<span class="comment">#添加网关IP地址，和步骤一中的网关IP一致</span></span><br><span class="line">DNS1=114.114.114.114</span><br></pre></td></tr></table></figure>
 <p>此时，这台虚拟机的<strong>IP地址</strong>就被设置为 192.168.163.100</p>
-<h3 id="配置虚拟机在本机的IP"><a href="#配置虚拟机在本机的IP" class="headerlink" title="配置虚拟机在本机的IP"></a>配置虚拟机在本机的IP</h3><p>网络和Internet &gt; 更改适配器选项<br>(&#x2F;img&#x2F;虚拟机4.png)<br>(&#x2F;img&#x2F;虚拟机5.png)</p>
+<h3 id="配置虚拟机在本机的IP"><a href="#配置虚拟机在本机的IP" class="headerlink" title="配置虚拟机在本机的IP"></a>配置虚拟机在本机的IP</h3><p>网络和Internet &gt; 更改适配器选项<br><img src="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA4.png" class="lazyload placeholder" data-srcset="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA4.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="p4"><br><img src="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA5.png" class="lazyload placeholder" data-srcset="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA5.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="p5"></p>
 <p>修改VMnet8的TCP&#x2F;IPv4的IP、掩码、网关</p>
 <ul>
 <li>IP地址要求网段与虚拟机系统的网段一致</li>
-<li>网关与前保持一致<br>(&#x2F;img&#x2F;虚拟机6.png)</li>
+<li>网关与前保持一致<br><img src="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA6.png" class="lazyload placeholder" data-srcset="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA6.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="p6"></li>
 </ul>
 <h3 id="在MobarXterm中连接"><a href="#在MobarXterm中连接" class="headerlink" title="在MobarXterm中连接"></a>在MobarXterm中连接</h3><ul>
-<li>要求IP设置与虚拟机系统IP一致，而不是与本机配置VMnet8的IP一致<br>(&#x2F;img&#x2F;虚拟机7.png)</li>
+<li>要求IP设置与虚拟机系统IP一致，而不是与本机配置VMnet8的IP一致<br><img src="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA7.png" class="lazyload placeholder" data-srcset="/img/%E8%99%9A%E6%8B%9F%E6%9C%BA7.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="p7"></li>
 </ul>
 <h2 id="ssh客户端——MobarXterm"><a href="#ssh客户端——MobarXterm" class="headerlink" title="ssh客户端——MobarXterm"></a>ssh客户端——MobarXterm</h2><p>由于在VMware界面中操作不友好，复制粘贴均已经失效，所以一般推荐使用ssh客户端</p>
 <ul>
