@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>cross_entropy的输出及标签</title>
+      <link href="/2024/04/07/cross-entropy%E7%9A%84%E8%BE%93%E5%87%BA%E5%8F%8A%E6%A0%87%E7%AD%BE/"/>
+      <url>/2024/04/07/cross-entropy%E7%9A%84%E8%BE%93%E5%87%BA%E5%8F%8A%E6%A0%87%E7%AD%BE/</url>
+      
+        <content type="html"><![CDATA[<p>对于交叉熵损失，模型的输出类型需要为torch.float32,而标签的类型也需要为torch.float32</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+          <category> 常见报错 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux服务器使用Clash</title>
       <link href="/2023/11/21/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8Clash/"/>
       <url>/2023/11/21/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8Clash/</url>
@@ -13,7 +34,7 @@
       
       <categories>
           
-          <category> 前端八股 </category>
+          <category> Linux </category>
           
       </categories>
       
